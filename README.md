@@ -4,7 +4,7 @@ CREATE DATABASE db_students;
 
 **_• Creating Table_** <br>
 CREATE TABLE db_students.personal (
-id INT NOT NULL UNIQUE AUTO_INCREMENT,
+id INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(50) NOT NULL,
 phone VARCHAR(10) NOT NULL UNIQUE,
 age INT NOT NULL CHECK (age >= 18),
@@ -13,6 +13,17 @@ city INT NOT NULL,
 country VARCHAR(90) DEFAULT 'Pakistan',
 PRIMARY KEY (id),
 FOREIGN KEY (city) REFERENCES cities (cid)
+);
+<br>-- OR --<br>
+CREATE TABLE personal (
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR (50) NOT NULL,
+percentage INT NOT NULL,
+age INT NOT NULL,
+gender VARCHAR(1) NOT NULL,
+city INT NOT NULL,
+PRIMARY KEY(id),
+FOREIGN KEY (city) REFERENCES City (cid)
 );
 
 **_• Inserting Values into columns_** <br>
@@ -47,3 +58,16 @@ SELECT *
 FROM information_schema.REFERENTIAL_CONSTRAINTS 
 WHERE constraint_schema = 'db_students' 
 AND table_name = 'personal1';
+
+**_• Watch data accosiated with FK and PK_** <br>
+SELECT * FROM personal INNER JOIN city ON personal.city = city.cid;
+
+**_• Watch with only allias names_** <br>
+SELECT * FROM personal p INNER JOIN city c ON p.city = c.cid;
+
+**_• Watch only you want to display_** <br>
+SELECT p.id, p.name, p.percentage, p.gender, c.cityname
+FROM personal p JOIN city c
+ON p.city = c.cid
+WHERE c.cityname = "Quetta"
+ORDER BY p.id;
