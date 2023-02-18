@@ -93,3 +93,11 @@ WHERE course = (SELECT cr_id FROM courses WHERE course_name = "MBA");
 **_• Multi search Query_** <br>
 SELECT name FROM students
 WHERE course IN (SELECT cr_id FROM courses WHERE course_name IN ("MBA", "MBBS"));
+
+**_• Show all names if course exist_** <br>
+SELECT name FROM students
+WHERE EXISTS (SELECT cr_id FROM courses WHERE course_name IN ("MBA"));
+
+**_• Show 0 names if course exist_** <br>
+SELECT name FROM students
+WHERE NOT EXISTS (SELECT cr_id FROM courses WHERE course_name IN ("MBA"));
