@@ -82,3 +82,14 @@ SELECT city_name AS "City Name", COUNT(std.city) as Total
 FROM students std INNER JOIN city c ON std.city = c.c_id
 GROUP BY city
 ORDER BY COUNT(std.city) DESC;
+
+**_• Search course id by course name_** <br>
+SELECT cr_id FROM courses WHERE course_name = "MBBS";
+
+**_• Search Query_** <br>
+SELECT name FROM students
+WHERE course = (SELECT cr_id FROM courses WHERE course_name = "MBA");
+
+**_• Multi search Query_** <br>
+SELECT name FROM students
+WHERE course IN (SELECT cr_id FROM courses WHERE course_name IN ("MBA", "MBBS"));
