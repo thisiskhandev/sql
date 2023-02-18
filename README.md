@@ -71,3 +71,14 @@ FROM personal p JOIN city c
 ON p.city = c.cid
 WHERE c.cityname = "Quetta"
 ORDER BY p.id;
+
+**_• Watch dual table relation data_** <br>
+SELECT std.s_id AS ID, std.name AS "Student Name", std.age AS Age, c.city_name AS City , cr.course_name AS Courses FROM students std
+INNER JOIN city c ON std.city = c.c_id
+INNER JOIN courses cr ON std.course = cr.cr_id;
+
+**_• Watch total data from specific table for e.g: Total students from each city_** <br>
+SELECT city_name AS "City Name", COUNT(std.city) as Total
+FROM students std INNER JOIN city c ON std.city = c.c_id
+GROUP BY city
+ORDER BY COUNT(std.city) DESC;
