@@ -14,7 +14,9 @@ country VARCHAR(90) DEFAULT 'Pakistan',
 PRIMARY KEY (id),
 FOREIGN KEY (city) REFERENCES cities (cid)
 );
+
 <br>-- OR --<br>
+
 CREATE TABLE personal (
 id INT NOT NULL AUTO_INCREMENT,
 name VARCHAR (50) NOT NULL,
