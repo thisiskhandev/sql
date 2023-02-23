@@ -1,5 +1,7 @@
 # SQL (Structured Query Language)
 
+**_• Set any DB as default Schema_** <br>
+USE db_name;
 
 **_• Creating Database_** <br>
 CREATE DATABASE db_students;
@@ -17,7 +19,7 @@ PRIMARY KEY (id),
 FOREIGN KEY (city) REFERENCES cities (cid)
 );
 
-<br>-- OR --<br>
+-- OR --<br>
 
 CREATE TABLE personal (
 id INT NOT NULL AUTO_INCREMENT,
@@ -112,11 +114,11 @@ WHERE age >= 10;
 **_• Show equal based data_** <br>
 WHERE age = 18 OR age = 21;
 
-<br> -- OR -- <br>
+-- OR -- <br>
 
 WHERE age IN (18, 21);
 
-<br>**_• Create an INDEX on column_** <br>
+**_• Create an INDEX on column_** <br>
 CREATE INDEX salID ON employees (salary);
 
 **_• Show all indexes in current table_** <br>
