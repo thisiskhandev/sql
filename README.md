@@ -104,3 +104,13 @@ WHERE EXISTS (SELECT cr_id FROM courses WHERE course_name IN ("MBA"));
 **_• Show 0 names if course exist_** <br>
 SELECT name FROM students
 WHERE NOT EXISTS (SELECT cr_id FROM courses WHERE course_name IN ("MBA"));
+
+**_• Show conditional based data_** <br>
+WHERE age >= 10;
+
+**_• Show equal based data_** <br>
+WHERE age = 18 OR age = 21;
+
+<br><br> -- OR -- <br><br>
+
+WHERE age IN (18, 21);
