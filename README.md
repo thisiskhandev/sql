@@ -1,5 +1,6 @@
 # SQL (Structured Query Language)
-<br>
+
+
 **_• Creating Database_** <br>
 CREATE DATABASE db_students;
 
@@ -111,6 +112,15 @@ WHERE age >= 10;
 **_• Show equal based data_** <br>
 WHERE age = 18 OR age = 21;
 
-<br><br> -- OR -- <br><br>
+<br> -- OR -- <br>
 
 WHERE age IN (18, 21);
+
+<br>**_• Create an INDEX on column_** <br>
+CREATE INDEX salID ON employees (salary);
+
+**_• Show all indexes in current table_** <br>
+SHOW INDEX FROM db_office.employees;
+
+**_• Delete a specific INDEX on column_** <br>
+DROP INDEX salID ON employees;
