@@ -1,7 +1,7 @@
 # SQL (Structured Query Language)
 
 **_• Set any DB as default Schema_** <br>
-USE db_name;
+USE database_name;
 
 **_• Creating Database_** <br>
 CREATE DATABASE db_students;
@@ -56,7 +56,7 @@ ALTER TABLE db_students.personal DROP COLUMN city;
 **_• Add column_** <br>
 ALTER TABLE db_students.personal ADD email VARCHAR(80) NOT NULL UNIQUE;
 
-**_• To add a foreign key to an existing table in SQL_**
+**_• Add a foreign key to an existing table in SQL_**
 ALTER TABLE db_students.personal ADD FOREIGN KEY (city) REFERENCES db_students.cities (cid);
 
 **_• Checking foreign keys and refrences column names_** <br>
