@@ -125,4 +125,4 @@ CREATE INDEX salID ON employees (salary);
 SHOW INDEX FROM db_office.employees;
 
 **_• Delete a specific INDEX on column_** <br>
-DROP INDEX salID ON employees;
+DROP INDEX salID ON employees
