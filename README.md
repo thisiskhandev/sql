@@ -71,7 +71,7 @@ SELECT * FROM personal INNER JOIN city ON personal.city = city.cid;
 **_• Watch with only allias names_** <br>
 SELECT * FROM personal p INNER JOIN city c ON p.city = c.cid;
 
-**_• Watch only you want to display_** <br>
+**_• Watch only you want to display specific columns data_** <br>
 SELECT p.id, p.name, p.percentage, p.gender, c.cityname
 FROM personal p JOIN city c
 ON p.city = c.cid
