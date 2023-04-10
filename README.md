@@ -19,7 +19,7 @@ PRIMARY KEY (id),
 FOREIGN KEY (city) REFERENCES cities (cid)
 );
 
--- OR --<br>
+#### -- OR --<br>
 
 CREATE TABLE personal (
 id INT NOT NULL AUTO_INCREMENT,
