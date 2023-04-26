@@ -2,7 +2,7 @@
  
 **_• Set any DB as default Schema_** <br>
 USE database_name;
-
+ 
 **_• Creating Database_** <br>
 CREATE DATABASE db_students;
  
