@@ -1,7 +1,7 @@
 # SQL (Structured Query Language)
  
 **_• Set any DB as default Schema_** <br>
-USE database_name;
+USE database_name; 
  
 **_• Creating Database_** <br>
 CREATE DATABASE db_students;
