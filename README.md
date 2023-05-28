@@ -4,7 +4,7 @@
 USE database_name;  
  
 **_• Creating Database_** <br>
-CREATE DATABASE db_students; 
+CREATE DATABASE db_students;  
 
 **_• Creating Table_** <br>
 CREATE TABLE db_students.personal (
