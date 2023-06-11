@@ -7,7 +7,7 @@ USE database_name;
 CREATE DATABASE db_students;  
 
 **_• Creating Table_** <br>
-CREATE TABLE db_students.personal (
+CREATE TABLE db_students.personal ( 
 id INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(50) NOT NULL,
 phone VARCHAR(10) NOT NULL UNIQUE,
