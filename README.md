@@ -1,5 +1,5 @@
 # SQL (Structured Query Language)
- 
+  
 **_• Set any DB as default Schema_** <br>  
 USE database_name;  
  
