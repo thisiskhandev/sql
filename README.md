@@ -13,7 +13,7 @@ name VARCHAR(50) NOT NULL,
 phone VARCHAR(10) NOT NULL UNIQUE, 
 age INT NOT NULL CHECK (age >= 18),
 gender VARCHAR(1) NOT NULL,
-city INT NOT NULL,
+city INT NOT NULL, 
 country VARCHAR(90) DEFAULT 'Pakistan', 
 PRIMARY KEY (id),
 FOREIGN KEY (city) REFERENCES cities (cid)
